@@ -32,8 +32,8 @@ typically more convenient and suggested to use the \code{\link{tcplRun}}
 wrapper function.
 }
 \details{
-Level 6 multiple-concentration flagging uses both the plate level 
-concentration-response data and the modeled parameters to flag potential 
+Level 6 multiple-concentration flagging uses both the plate level
+concentration-response data and the modeled parameters to flag potential
 false positives and false negative results.
 }
 \seealso{

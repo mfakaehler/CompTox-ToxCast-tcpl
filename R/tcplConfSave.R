@@ -6,22 +6,22 @@
 #' @export
 
 tcplConfSave <- function () {
-  
+
   conf_file <- .getConfFile()
-    
+
   if(any(sapply(tcplConfList(), is.null))) {
     stop("One of the tcpl settings is NULL. Saving the configuration file ",
          "with a NULL setting\nwill keep the package from loading in future ",
          "sessions.")
   }
-  
+
   drvr <- getOption("TCPL_DRVR")
-  if (!drvr %in% c("MySQL", "tcplLite")) {
+  if (!drvr %in% c("MySQL", "PostgreSQL", "tcplLite")) {
     stop(drvr, " is not a supported database driver. Must be 'tcplLite' or ",
          "'MySQL'.")
   }
   drvr <- shQuote(drvr)
-  
+
   host <- getOption("TCPL_HOST")
   host <- if(is.na(host)) host else shQuote(host)
   user <- getOption("TCPL_USER")
@@ -30,7 +30,7 @@ tcplConfSave <- function () {
   pass <- if(is.na(pass)) pass else shQuote(pass)
   db   <- getOption("TCPL_DB")
   db   <- if(is.na(db))   db   else shQuote(db)
-  
+
   cat("###################################################################\n",
       "\n",
       "## Detailed information about this file available in the help file for",
@@ -46,7 +46,7 @@ tcplConfSave <- function () {
       sep = " ",
       file = file.path(conf_file),
       append = FALSE)
-  
+
 }
 
 #-------------------------------------------------------------------------------

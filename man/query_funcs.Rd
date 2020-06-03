@@ -37,16 +37,16 @@ These functions send a query to the given database, and are the access point
 for all tcpl functions that query or update the tcpl database.
 }
 \details{
-Currently, the tcpl package only supports the "MySQL" and "tcplLite" database
+Currently, the tcpl package only supports the "MySQL", "PostgreSQL" and "tcplLite" database
 drivers.
 
 \code{tcplQuery} returns a data.table object with the query results.
-\code{tcplSendQuery} sends a query, but does not fetch any results, and 
+\code{tcplSendQuery} sends a query, but does not fetch any results, and
 returns 'TRUE' or the error message given by the database.
 }
 \examples{
 
-## Store the current config settings, so they can be reloaded at the end 
+## Store the current config settings, so they can be reloaded at the end
 ## of the examples
 conf_store <- tcplConfList()
 TCPLlite <- file.path(system.file(package = "tcpl"), "example")
@@ -60,7 +60,7 @@ if (conf_store$TCPL_DRVR == 'MySQL') {
 } else {
   tcplQuery("SELECT * FROM assay;", tbl='assay')
 }
- 
+
 ## Reset configuration
 options(conf_store)
 

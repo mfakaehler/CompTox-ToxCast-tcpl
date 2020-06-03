@@ -16,7 +16,7 @@ tcplAppend(dat, tbl, db, lvl = NULL)
 \item{lvl}{Usually Integer to indicate what level to auto-increment}
 }
 \description{
-\code{tcplAppend} takes a data.table (dat) and appends the data.table into 
+\code{tcplAppend} takes a data.table (dat) and appends the data.table into
 a database table.
 }
 \note{

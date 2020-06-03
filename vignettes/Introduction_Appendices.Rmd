@@ -74,7 +74,7 @@ tcpl (v1.3) loaded with the following settings:
   TCPL_DRVR:  tcplLite
 Default settings stored in TCPL.conf. See ?tcplConf for more information.
 ```
-The package consists of five settings: (1) <font face="CMTT10"> $TCPL_DB </font> points to the <font face="CMTT10"> tcpl </font> database (either the path to the CSV directory, as in the given example above, or the name of the MySQL database), (2) <font face="CMTT10"> $TCPL_USER </font> stores the username for accessing the database, (3) <font face="CMTT10"> $TCPL_PASS </font> stores the password for accessing the database, (4) <font face="CMTT10"> $TCPL_HOST </font> points to the MySQL server host, and (5) <font face="CMTT10"> $TCPL_DRVR </font> indicates which database driver to use (either "MySQL" or "tcplLite").
+The package consists of five settings: (1) <font face="CMTT10"> $TCPL_DB </font> points to the <font face="CMTT10"> tcpl </font> database (either the path to the CSV directory, as in the given example above, or the name of the MySQL database), (2) <font face="CMTT10"> $TCPL_USER </font> stores the username for accessing the database, (3) <font face="CMTT10"> $TCPL_PASS </font> stores the password for accessing the database, (4) <font face="CMTT10"> $TCPL_HOST </font> points to the MySQL server host, and (5) <font face="CMTT10"> $TCPL_DRVR </font> indicates which database driver to use (either "MySQL", "PostgreSQL" or "tcplLite").
 
 Refer to <font face="CMTT10"> ?tcplConf </font> for more information. At any time, users can check the settings using <font face="CMTT10"> tcplConfList() </font>. An example of database settings using tcpl would be as follows:
 

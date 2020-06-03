@@ -46,41 +46,41 @@ tcplConfSave()
 These functions are used to configure the tcpl settings.
 }
 \details{
-Currently, the tcpl package only supports the "MySQL" and "tcplLite" database
-drivers.
+Currently, the tcpl package only supports the "MySQL", "PostgreSQL" and
+"tcplLite" database drivers.
 
-The settings can be stored in a configuration file to make the using the 
+The settings can be stored in a configuration file to make the using the
 package more user-friendly. To create the configuration file, the user must
-first create a system environment variable ('TCPL_CONF') that points to to 
+first create a system environment variable ('TCPL_CONF') that points to to
 the file. There is more information about system environment variables in
-\code{\link{Startup}} and \code{\link{Sys.getenv}}. Briefly, the user 
+\code{\link{Startup}} and \code{\link{Sys.getenv}}. Briefly, the user
 needs to modify the '.Renviron' file in their home directory. If the file
 does not exist, create it, and add the following line:
 
 TCPL_CONF=path/to/confFile.conf
 
 Here 'path/to/confFile.conf' can be any path to a file. One suggestion would
-be to include .tcplConf in the home directory, e.g. TCPL_CONF=~/.tcplConf. 
+be to include .tcplConf in the home directory, e.g. TCPL_CONF=~/.tcplConf.
 Note, '~' may not indicate the home directory on every operating system.
 Once the environment variable is added, the user can change the settings
 using \code{tcplConf}, then save the settings to the file given by the
-TCPL_CONF environment variable running \code{tcplConfSave()}. 
+TCPL_CONF environment variable running \code{tcplConfSave()}.
 
-\code{tcplConf} changes \code{options} to set the tcpl-specific options, 
-most importantly to configure the connection to the tcpl databases. 
-\code{tcplConf} will only change non-null values, and can be used to 
-change a single value if needed. 
+\code{tcplConf} changes \code{options} to set the tcpl-specific options,
+most importantly to configure the connection to the tcpl databases.
+\code{tcplConf} will only change non-null values, and can be used to
+change a single value if needed.
 
 \code{tcplConfSave} modifies the configuration file to reflect the current
 tcpl settings.
 
 \code{tcplConfList} lists the values assigned to the tcpl global options.
 
-\code{tcplConfLoad} updates the tcpl settings to reflect the current 
+\code{tcplConfLoad} updates the tcpl settings to reflect the current
 configuration file.
 
 \code{tcplConfDefault} changes the \code{options} to reflect the default
-settings for the example tcplLite database, i.e. local directory, but does  
+settings for the example tcplLite database, i.e. local directory, but does
 not alter the configuration file.
 
 \code{tcplConfReset} is used to generate the initial configuration script,
